@@ -2,4 +2,4 @@ COMPONENTS:
 1-App
 2-Pokemo Card
 3-Button (generate 2 random pokemon and compare stats)
-4-Winning Pokemon dispaly
+4-Winning Pokemon display
