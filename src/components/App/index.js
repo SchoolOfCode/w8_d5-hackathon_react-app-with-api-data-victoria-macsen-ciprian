@@ -59,16 +59,21 @@ function App()
     {
 
       console.log('P2 won', sumP1, sumP2)
+      setMessage(`${pokemon2.name} won`)
 
     }
     if (sumP1 > sumP2)
     {
 
       console.log('P1 won', sumP1, sumP2)
+      setMessage(`${pokemon1.name} won`)
+
 
     } else if (sumP1 === sumP2)
     {
       console.log('Draw', sumP1, sumP2)
+      setMessage(`${pokemon1.name} and ${pokemon2.name} have the same strength`)
+
     }
   }
 
