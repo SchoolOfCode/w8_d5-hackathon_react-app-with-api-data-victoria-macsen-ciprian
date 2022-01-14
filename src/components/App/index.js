@@ -12,6 +12,7 @@ function App()
   const [ id2, setId2 ] = useState(randomNumber)
   const [ pokemon1, setPokemon1 ] = useState(null)
   const [ pokemon2, setPokemon2 ] = useState(null)
+  const [ message, setMessage ] = useState("Compare Pokemon to see which will will in a fight!")
 
 
   useEffect(() =>
@@ -83,7 +84,7 @@ function App()
   return (
     <div className="App">
       <Button handleClick={handleClick} text="Fetch pokemon" />
-      <WinnerText text="Winner Pokemon" />
+      <WinnerText text={message} />
       <PokemonCard id={id1} name={pokemon1.name} src={pokemon1.sprites.front_default} hp={pokemon1.stats[ 0 ].base_stat} attack={pokemon1.stats[ 1 ].base_stat} defence={pokemon1.stats[ 2 ].base_stat} />
       <PokemonCard id={id2} name={pokemon2.name} src={pokemon2.sprites.front_default} hp={pokemon2.stats[ 0 ].base_stat} attack={pokemon2.stats[ 1 ].base_stat} defence={pokemon2.stats[ 2 ].base_stat} />
       <Button handleClick={comparePokemon} text="Compare pokemon" />
