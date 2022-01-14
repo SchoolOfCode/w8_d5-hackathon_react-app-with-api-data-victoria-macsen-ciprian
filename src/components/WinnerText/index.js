@@ -1,6 +1,7 @@
 import React from "react"
 
-function WinnerText(text) {
+function WinnerText({ text })
+{
    return <h2>{text}</h2>
 };
 
