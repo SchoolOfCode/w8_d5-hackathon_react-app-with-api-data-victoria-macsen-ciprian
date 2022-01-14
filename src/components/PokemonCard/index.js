@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./Pokemoncard.css"
 
 function PokemonCard({ name, src, strength, abilities }) {
   return (

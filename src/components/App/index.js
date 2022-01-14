@@ -30,7 +30,7 @@ function App() {
     async function fetchPokemon2() {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id2}`);
       const data = await response.json();
-      console.log("pokemon: ", data.abilities);
+      // console.log("pokemon: ", pokemon.data);
       setPokemon2(data);
       // console.log('pokemon2:', data.stats[ 1 ].base_stat)
     }
@@ -81,10 +81,11 @@ function App() {
     <div className="App">
       <Button handleClick={handleClick} text="Fetch pokemon" />
       <WinnerText text={message} />
+        <section className="pokemoncontainer">
       <PokemonCard
         id={id1}
         name={pokemon1.name}
-        src={pokemon1.sprites.front_default}
+        src={pokemon1.sprites.other.home.front_default}
         strength={
           pokemon1.stats[0].base_stat +
           pokemon1.stats[1].base_stat +
@@ -98,17 +99,18 @@ function App() {
       <PokemonCard
         id={id2}
         name={pokemon2.name}
-        src={pokemon2.sprites.front_default}
+        src={pokemon2.sprites.other.home.front_default}
         strength={
           pokemon2.stats[0].base_stat +
           pokemon2.stats[1].base_stat +
           pokemon2.stats[2].base_stat
         }
-        abilities={pokemon1.abilities}
+        abilities={pokemon2.abilities}
         hp={pokemon2.stats[0].base_stat}
         attack={pokemon2.stats[1].base_stat}
         defence={pokemon2.stats[2].base_stat}
       />
+      </section>
       <Button handleClick={comparePokemon} text="Compare pokemon" />
     </div>
   );
