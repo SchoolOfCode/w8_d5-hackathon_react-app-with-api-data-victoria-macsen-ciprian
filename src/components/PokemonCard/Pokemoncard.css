@@ -2,12 +2,15 @@
 	border: 11px solid rgb(255, 208, 0);
 	border-radius: 10px;
 	background: linear-gradient(
-		180deg,
+		45deg,
+		#fc5406,
 		#fc9106,
-		#ff5100,
+		#e7955f,
 		#ffae00,
 		#fc9106,
-		#ff5100
+		#f8c09a,
+		#f7a73f,
+		#f0c679
 	);
 	width: 17rem;
 	height: 22rem;
@@ -21,7 +24,7 @@
 	justify-content: space-between;
 }
 .name_and_strength h4 {
-	color: white;
+	color: red;
 }
 
 .pokemon__card div:last-of-type {
