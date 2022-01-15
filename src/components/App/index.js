@@ -23,9 +23,8 @@ function App()
     {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id1}`)
       const data = await response.json()
-      console.log("pokemon1: ", data.abilities)
       setPokemon1(data)
-      // console.log('pokemon1:', data.stats[ 1 ].base_stat)
+
     }
     fetchPokemon()
   }, [ id1 ])
@@ -36,10 +35,7 @@ function App()
     {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id2}`)
       const data = await response.json()
-      console.log("pokemon2: ", data.abilities)
-      console.log("pokemon2 data: ", data)
       setPokemon2(data)
-      // console.log('pokemon2###:', pokemon.abilities)
     }
     fetchPokemon2()
   }, [ id2 ])
@@ -51,8 +47,6 @@ function App()
     setId1(randomNumber1)
     setId2(randomNumber2)
     setMessage("Compare Pokemon to see which would be victorious!")
-    // console.log(randomNumber1)
-    // console.log(randomNumber2)
   }
   function comparePokemon()
   {
@@ -66,7 +60,6 @@ function App()
       pokemon2.stats[ 2 ].base_stat
     if (sumP1 < sumP2)
     {
-      console.log("P2 won", sumP1, sumP2)
       setMessage(
         `${pokemon2.name[ 0 ].toUpperCase() + pokemon2.name.slice(1).toLowerCase()
         } would win!`
@@ -74,14 +67,12 @@ function App()
     }
     if (sumP1 > sumP2)
     {
-      console.log("P1 won", sumP1, sumP2)
       setMessage(
         `${pokemon1.name[ 0 ].toUpperCase() + pokemon1.name.slice(1).toLowerCase()
         } would win!`
       )
     } else if (sumP1 === sumP2)
     {
-      console.log("Draw", sumP1, sumP2)
       setMessage(
         `${pokemon1.name[ 0 ].toUpperCase() + pokemon1.name.slice(1).toLowerCase()
         } and ${pokemon2.name[ 0 ].toUpperCase() + pokemon2.name.slice(1).toLowerCase()
