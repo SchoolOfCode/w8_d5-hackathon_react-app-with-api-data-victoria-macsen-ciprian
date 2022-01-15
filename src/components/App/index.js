@@ -69,7 +69,7 @@ function App()
       console.log("P2 won", sumP1, sumP2)
       setMessage(
         `${pokemon2.name[ 0 ].toUpperCase() + pokemon2.name.slice(1).toLowerCase()
-        } won`
+        } would win!`
       )
     }
     if (sumP1 > sumP2)
@@ -77,7 +77,7 @@ function App()
       console.log("P1 won", sumP1, sumP2)
       setMessage(
         `${pokemon1.name[ 0 ].toUpperCase() + pokemon1.name.slice(1).toLowerCase()
-        } won`
+        } would win!`
       )
     } else if (sumP1 === sumP2)
     {
