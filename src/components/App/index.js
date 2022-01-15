@@ -14,7 +14,7 @@ function App()
   const [ pokemon1, setPokemon1 ] = useState(null)
   const [ pokemon2, setPokemon2 ] = useState(null)
   const [ message, setMessage ] = useState(
-    "Compare Pokemon to see which will will in a fight!"
+    "Compare Pokemon to see which would be victorious!"
   )
 
   useEffect(() =>
@@ -50,7 +50,7 @@ function App()
     let randomNumber2 = Math.ceil(Math.random() * 151)
     setId1(randomNumber1)
     setId2(randomNumber2)
-    setMessage("Compare Pokemon to see which will will in a fight!")
+    setMessage("Compare Pokemon to see which would be victorious!")
     // console.log(randomNumber1)
     // console.log(randomNumber2)
   }
