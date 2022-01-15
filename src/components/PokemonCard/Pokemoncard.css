@@ -20,6 +20,9 @@
 	display: flex;
 	justify-content: space-between;
 }
+.name_and_strength h4 {
+	color: white;
+}
 
 .pokemon__card div:last-of-type {
 	width: 100%;
