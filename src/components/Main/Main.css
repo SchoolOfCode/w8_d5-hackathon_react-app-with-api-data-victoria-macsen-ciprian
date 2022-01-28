@@ -1,0 +1,7 @@
+.pokemoncontainer {
+	display: flex;
+	justify-content: space-evenly;
+	margin: auto;
+	gap: 3rem;
+	max-width: 40rem;
+}

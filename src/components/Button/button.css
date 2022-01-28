@@ -1,0 +1,9 @@
+button {
+	padding: 1rem 2rem;
+	border-radius: 10px;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+button:last-of-type {
+	margin-top: 2rem;
+}
